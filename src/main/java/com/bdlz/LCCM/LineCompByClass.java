@@ -9,16 +9,10 @@ public class LineCompByClass {
         System.out.println("Welcome to Line Computation program by class method");
 
         LineCompByClass lineMethods = new LineCompByClass();
+        lineMethods.lengthOfLine1();
+        lineMethods.lengthOfLine2();
+        lineMethods.compareTo();
 
-        double line1Length=lineMethods.lengthOfLine1();
-        double line2Length=lineMethods.lengthOfLine2();
-
-        if(line1Length == line2Length){
-            System.out.println("Lines are Equal");
-        }else
-        {
-            System.out.println("lines are not equal");
-        }
     }
     public double lengthOfLine1() {
         System.out.println("Enter x1 co-ordinate of line: ");
@@ -43,7 +37,16 @@ public class LineCompByClass {
         System.out.println("Enter q2 co-ordinate of  line: ");
         int q2 = s.nextInt();
         length_of_Secondline = Math.sqrt((p2-p1)*(p2-p1)+(q2-q1)*(q2-q1));
-        System.out.println("length of Line1: " + length_of_Secondline);
+        System.out.println("length of Line2: " + length_of_Secondline);
         return length_of_Secondline;
+    }
+    public void compareTo() {
+        if (length_of_Firstline > length_of_Secondline) {
+            System.out.println("Line1 is greater than line2");
+        } else if (length_of_Firstline < length_of_Secondline) {
+            System.out.println("Line2 is greater than line1");
+        } else {
+            System.out.println("Both Lines are Equal");
+        }
     }
 }
