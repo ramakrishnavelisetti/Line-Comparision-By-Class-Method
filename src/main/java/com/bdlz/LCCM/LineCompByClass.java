@@ -9,9 +9,8 @@ public class LineCompByClass {
         System.out.println("Welcome to Line Computation program by class method");
 
         LineCompByClass lineMethods = new LineCompByClass();
-        lineMethods.lengthOfLine1();
-        lineMethods.lengthOfLine2();
         lineMethods.compareTo();
+        lineMethods.equalTo();
 
     }
     public double lengthOfLine1() {
@@ -39,6 +38,18 @@ public class LineCompByClass {
         length_of_Secondline = Math.sqrt((p2-p1)*(p2-p1)+(q2-q1)*(q2-q1));
         System.out.println("length of Line2: " + length_of_Secondline);
         return length_of_Secondline;
+    }
+    double line1Length=lengthOfLine1();
+    double line2Length=lengthOfLine2();
+
+    public void equalTo() {
+
+        if(line1Length == line2Length){
+            System.out.println("Lines are Equal");
+        }else
+        {
+            System.out.println("lines are not equal");
+        }
     }
     public void compareTo() {
         if (length_of_Firstline > length_of_Secondline) {
